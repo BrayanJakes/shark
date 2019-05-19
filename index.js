@@ -15,7 +15,7 @@ app.set('port', process.env.PORT || 3000);
 
 
 //middlewares
-app.use(express.static(__dirname + '/dist/appmega'));
+app.use(express.static(__dirname + 'dist/appmega'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // app.use((req, res, next) => {
