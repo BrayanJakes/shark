@@ -1,4 +1,4 @@
-export const URI = 'https://backendshark.herokuapp.com';
+export const URI = 'localhost:3000';
 
 
 
