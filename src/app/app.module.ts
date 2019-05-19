@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { PagesModule } from './components/pages.module';
-import {  FileUploadModule } from 'ng2-file-upload';
 
 
 
@@ -19,7 +18,7 @@ import { AppComponent } from './app.component';
 import { PageComponent } from './pages/page/page.component';
 import { LoginComponent } from './logeo/login/login.component';
 import { RegistroComponent } from './logeo/registro/registro.component';
-import { SocketService } from './services/socket.service';
+// import { SocketService } from './services/socket.service';
 
 
 
@@ -40,11 +39,10 @@ import { SocketService } from './services/socket.service';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    FormsModule,
-    FileUploadModule
+    FormsModule
 
   ],
-  providers: [ SocketService ],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

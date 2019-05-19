@@ -50,11 +50,15 @@ import { SmsPipe } from '../pipes/sms.pipe';
   exports: [
     DashboardComponent,
     FechaPipe,
-    LikePipe,
     NavbarComponent,
     SidebarComponent,
     FooterComponent,
+    DescripcionComponent,
+    LikePipe,
+    UsuarioComponent,
+    EdituserComponent,
     ImgPipe,
+    ProfileComponent,
     SmsPipe
   ]
 })
