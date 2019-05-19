@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { FileSelectDirective, FileUploadModule } from 'ng2-file-upload';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 
@@ -31,7 +31,6 @@ import { SmsPipe } from '../pipes/sms.pipe';
     NavbarComponent,
     SidebarComponent,
     FooterComponent,
-    FileSelectDirective,
     DescripcionComponent,
     LikePipe,
     UsuarioComponent,
