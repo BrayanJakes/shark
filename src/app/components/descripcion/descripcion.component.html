@@ -1,0 +1,84 @@
+
+
+<div class="main-content">
+  <div class="container-fluid">
+
+
+    <div class="card card-chart">
+      <div class="card-header card-header-primary">
+          <div class="ct-chart" >
+            
+              <div class="author ">
+                  <img src="../../assets/public/imgperfil/{{img}}" alt="" class="avatar img-raised float-left"><a [routerLink]="['/profile', IdUsuario]" ><h2> {{ imagen.usuario.nickname | titlecase  }} </h2></a> 
+              </div>
+              
+          </div>
+      </div>
+      <div class="card-body">
+         
+              
+                      <div class="ct-chart mb-2" >
+                              <img src="../../assets/public/imagenes/{{imagen.filename}}" class="img-thumbnail w-100 " alt="">
+                      </div>   
+                      <br>                 
+            
+                      <h6 class="card-category text-info">{{ imagen.timestamp | fecha }}</h6>
+                      <br>
+                      <br>
+                      <p class="card-category">
+                              <span class="text-info pointer" (click)="meGusta(imagen._id)"><i class="material-icons">
+                                  thumb_up
+                                  </i> Me gusta <span *ngFor="let like of imagen.likes"> <a [routerLink]="['/profile', like.id]" >({{ like.nickname }})</a> </span></span>
+                          </p>
+                      <form #form='ngForm' (submit)="AgregarComment(form)">
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="col-md-10">
+                              <label >Escribe un comentario</label>
+                          <textarea name="comment" (keyup.enter)="AgregarComment(form)" [(ngModel)]="form.value.comment" class="form-control" ></textarea>
+                            </div>
+                            <div class="col-md-2">
+                              <button class="btn btn-info btn-lg btn-round btn-block">
+                                  <i class="material-icons">
+                                      comment
+                                      </i>Comentar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+
+                      <hr>
+
+                      <div class="card-description" *ngFor="let comentario of imagen.comment">
+                         <div class="row">
+                          <div class="col-md-2" >
+                            <div class="row">
+                              <div class="col-md-2 ">
+                                  <div class="author">
+                                      <img src="../../assets/public/imgperfil/{{comentario.img}}" alt="" class="avatar img-raised float-left">
+                                  </div>
+                                 
+                              </div>
+                              <div class="col-md-8 ">
+                                   <h4>{{ comentario.usuario }}</h4>
+                              </div>
+
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <p disabled=""> {{ comentario.comment }}</p>
+                          </div>
+                         </div>
+                      </div>
+
+
+                      
+             
+              
+          
+      </div>
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,118 @@
+<div class="main-content">
+    <div class="container-fluid">
+        
+       
+        <div class="row">
+  
+          
+            
+            <div class="col-md-7 ">
+                 
+  
+
+    
+      <div class="card">
+          <div class="card-header card-header-primary">
+            <h4 class="card-title">Subir Foto</h4>
+            <p class="card-category">Sube una foto nueva</p>
+          </div>
+          <div class="card-body">
+
+        <div class=" form-file-upload form-file-multiple">
+                
+                <div class="input-group">
+                    <input type="file" id="image" ng2FileSelect [uploader]="uploader" name="image" class="form-control inputFileVisible" placeholder="Single File">
+                   
+                </div>
+
+                  <br>
+
+
+       
+              </div>
+      
+        <button type="button" (click)="agregarFoto()"  class="btn btn-primary">Cargar Foto</button>
+
+
+
+            </div>
+            </div>
+                                  <hr>
+                                  <br>
+                                  <br>
+                
+                <div class="card card-blog mb-5" *ngFor="let imagen of imagenes">
+                      
+                    <a [routerLink]="['/descripcion', imagen._id]"><div class="card-header card-header-image">
+                          
+                           <img class="img" src="../../assets/public/imagenes/{{imagen.filename}}">
+                              <div class="card-title">
+                                      {{imagen.usuario.nickname | titlecase}}
+                              </div>
+                          
+                      </div></a>  
+                      <div class="card-body">
+                          <h6 class="card-category text-info">{{imagen.timestamp | fecha}}</h6>
+                          <p class="card-category">
+                                  <span class="text-info pointer" (click)="meGusta(imagen._id)"><i class="material-icons">
+                                        thumb_up
+                                        </i> Me gusta ({{imagen.likes | like}}) </span>
+                              </p>
+                          <p class="card-description">
+                                  {{imagen.description}}
+                          </p>
+                      </div>
+                      
+                  </div>
+                
+                  
+            </div>
+          
+   
+                  <div class="col-md-5">
+                          <div class="card card-chart">
+                              <div class="card-header card-header-primary">
+                                  <div class="ct-chart" ><h2>Tus Fotos</h2></div>
+                                  <a [routerLink]="['/usuario', usuarioId]"  class="card-category">Expandir</a>
+                              </div>
+                              <div class="card-body">
+                                  <div class="row">
+                                      <div class="col-md-4" *ngFor="let img of usuarioImg">
+                                              <div class="ct-chart mb-2" >
+                                                     <a [routerLink]="['/descripcion', img._id]" ><img src="../../assets/public/imagenes/{{img.filename}}" class="img-thumbnail" alt=""></a> 
+                                              </div>   
+                                              <div class="row">
+
+                                                    <div class="col-md-6">
+                                                        <p class="card-category">
+                                                            <span class="text-info"><i class="material-icons">
+                                                                    thumb_up
+                                                                    </i>  ({{ img.likes | like}}) </span>
+                                                        </p>
+                                                    </div>
+                                                        <div class="col-md-6 text-right">
+                                                            <p class="card-category">
+                                                                <span class="text-info"><i class="material-icons"> comment </i> ({{ img.comment | like}}) </span>
+                                                            </p> 
+                                                        </div>
+                                                      
+                                                     
+                                                  </div>
+
+                                      </div>
+                                      
+                                     
+                                      
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+  
+      
+           
+        </div>
+        
+
+
+
+ 

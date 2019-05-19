@@ -1,0 +1,63 @@
+<div class="content margen">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+            <div class="card card-chart">
+                <div class="card-header card-header-primary">
+                    <div class="ct-chart" ><h2>Tus Fotos</h2></div>
+                </div>
+                <div class="card-body">
+                    
+                    <div class="row">
+                        <div class="col-md-4" *ngFor="let img of imagenes">
+                                <div class="ct-chart mb-2" >
+                                       <a [routerLink]="['/descripcion', img._id]" ><img src="../../assets/public/imagenes/{{img.filename}}" width="250px" height="200px" class="img-thumbnail " alt=""></a> 
+                                </div>  
+
+                                <div class="row">
+
+                                  <div class="col-md-6 text-left">
+                                      <p class="card-category">
+                                          <span class="text-info"><i class="material-icons">
+                                              thumb_up
+                                              </i>  ({{ img.likes | like}}) </span>
+                                      </p>
+                                  </div>
+                                      <div class="col-md-6 text-right">
+                                          <p class="card-category">
+                                              <span class="text-info"><i class="material-icons"> comment </i> ({{ img.comment | like}}) </span>
+                                          </p> 
+                                      </div>
+                          
+                                    
+                                   
+                                </div>
+                                  
+                                            
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-profile">
+            <div class="card-avatar">
+              <a href="#pablo">
+                <img class="img" src="../../../assets/public//imgperfil/{{img}}" />
+              </a>
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Usuario: ({{usuarioPef.nickname}})</h4>
+              <p class="card-description">
+                {{ usuarioPef.description }}
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

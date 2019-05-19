@@ -1,0 +1,56 @@
+<div class="content margen">
+    <div class="container">
+    
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title">Registrar</h4>
+              <p class="card-category">Completa los datos</p>
+            </div>
+            <div class="card-body">
+              <form #form='ngForm' (ngSubmit)="registrar(form)">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="bmd-label-floating" [ngClass]="{'control-label': true}">Nickname</label>
+                      <input type="text" name="nombre" [(ngModel)]="form.value.nombre" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Email address</label>
+                      <input type="email" name="email" [(ngModel)]="form.value.email" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">contraseña</label>
+                      <input type="password" name="clave1" [(ngModel)]="form.value.clave1" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">confirmar contraseña</label>
+                      <input type="password" name="clave2" [(ngModel)]="form.value.clave2" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <button type="submit" class="btn btn-primary pull-right btn-block">Registrarse</button>
+                
+                <hr>
+
+               
+                
+                <div class="clearfix"></div>
+              </form>
+              <br>
+              <div class=" text-center">
+                  <p class=" description">
+                                                                 Ya tienes cuenta?<a [routerLink]="['/login']"> Inicia session</a> 
+
+                  </p>
+                </div>
+        </div>

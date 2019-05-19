@@ -1,0 +1,48 @@
+<div class="content margen ">
+    <div class="container ">
+    
+          <div class="card fadeInUp">
+            <div class="card-header card-header-primary">
+              
+              <h4 class="card-title fadeInUp"> <i class="material-icons">
+                  https
+                  </i > Login</h4>
+              <p class="card-category">Ingresa tus datos</p>
+            </div>
+            <div class="card-body">
+              <form #form='ngForm' (ngSubmit)="logear(form)" >
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Email</label>
+                      <input type="email" name="email" [(ngModel)]="form.value.email" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">contraseña</label>
+                      <input type="password" name="clave1" [(ngModel)]="form.value.clave1" class="form-control">
+                    </div>
+                  </div>
+
+                </div>
+                
+                
+                <button type="submit" class="btn btn-primary pull-right btn-block">Iniciar Session</button>
+                
+                <hr>
+
+               
+                
+                <div class="clearfix"></div>
+              </form>
+              <br>
+              <div class=" text-center">
+                  <p class=" description">
+                                                                 Entras por primera vez?<a [routerLink]="['/registro']"> Create una aqui</a> 
+
+                  </p>
+                </div>
+        </div>
