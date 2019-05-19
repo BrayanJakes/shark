@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { PagesModule } from './components/pages.module';
+import { FileSelectDirective, FileUploadModule } from 'ng2-file-upload';
 
 
 
@@ -33,13 +34,15 @@ import { SocketService } from './services/socket.service';
     AppComponent,
     PageComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    FileSelectDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    FormsModule
+    FormsModule,
+    FileUploadModule
 
   ],
   providers: [ SocketService ],
