@@ -12,7 +12,7 @@ export class LoginService {
   }
 
   url = `${URI}/login`;
-   socket = io('http://localhost:3000');
+   socket = io('https://backendshark.herokuapp.com');
 
 
   logear(email) {
