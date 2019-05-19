@@ -108,11 +108,11 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('mega', resp.user._id);
       localStorage.setItem('img', resp.user.image);
 
-      // this.loginService.socket.emit('usuario', {
-      //   nickname: localStorage.getItem('user'),
-      //   id: localStorage.getItem('mega'),
-      //   img: localStorage.getItem('img')
-      // });
+      this.loginService.socket.emit('usuario', {
+        nickname: localStorage.getItem('user'),
+        id: localStorage.getItem('mega'),
+        img: localStorage.getItem('img')
+      });
 
 
       location.reload();

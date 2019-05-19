@@ -19,18 +19,18 @@ export class PageComponent implements OnInit {
 
   ngOnInit() {
 
-// setInterval(() => {
-//   this.conectados();
-// }, 2000);
+setInterval(() => {
+  this.conectados();
+}, 2000);
 
 
   }
 
 
-  // conectados() {
-  //   this.loginService.socket.emit('conexion', null, (resp) => {
-  //     this.UsuariosConectados = resp;
-  //   });
-  // }
+  conectados() {
+    this.loginService.socket.emit('conexion', null, (resp) => {
+      this.UsuariosConectados = resp;
+    });
+  }
 
 }

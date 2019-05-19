@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit {
   imagenes: any[] = [];
   titulo: 'hola';
   token = localStorage.getItem('JWT');
-  h = `${URI}/images?token=${this.token}`;
+  h = `${URI}/images/?token=${this.token}`;
   form: NgForm;
 
   imagen: File;
@@ -83,8 +83,7 @@ export class DashboardComponent implements OnInit {
                   '</div>'
               });
               }
-              console.log(response);
-
+              location.reload();
   };
 
 

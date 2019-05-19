@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col-md-4" *ngFor="let img of imagenes">
                                 <div class="ct-chart mb-2" >
-                                       <a [routerLink]="['/descripcion', img._id]" ><img src="./assets/public/imagenes/{{img.filename}}" width="250px" height="200px" class="img-thumbnail " alt=""></a> 
+                                       <a [routerLink]="['/descripcion', img._id]" ><img src="../../../assets/public/imagenes/{{img.filename}}" width="250px" height="200px" class="img-thumbnail " alt=""></a> 
                                 </div>  
 
                                 <div class="row">
@@ -46,7 +46,7 @@
           <div class="card card-profile">
             <div class="card-avatar">
               <a href="#pablo">
-                <img class="img" src="./assets/public//imgperfil/{{img}}" />
+                <img class="img" src="../../../assets/public//imgperfil/{{img}}" />
               </a>
             </div>
             <div class="card-body">

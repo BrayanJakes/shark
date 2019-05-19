@@ -17,9 +17,9 @@ export class SidebarComponent implements OnInit {
   }
 
   salir() {
-    // this.loginService.socket.emit('Salirse', {
-    //   nickname: localStorage.getItem('user')
-    // });
+    this.loginService.socket.emit('Salirse', {
+      nickname: localStorage.getItem('user')
+    });
     localStorage.clear();
     this.router.navigate(['login']);
   }

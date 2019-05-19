@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-// import * as io from 'socket.io-client';
+import * as io from 'socket.io-client';
 import { URI } from '../config/config';
 import { HttpClient } from '@angular/common/http';
 
@@ -12,7 +12,7 @@ export class LoginService {
   }
 
   url = `${URI}/login`;
-  // socket = io('https://backendshark.herokuapp.com');
+  socket = io('http://localhost:3000');
 
 
   logear(email) {

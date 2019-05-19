@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { FileUploadModule } from 'ng2-file-upload';
+import { FileSelectDirective} from 'ng2-file-upload';
 
 
 
@@ -37,14 +37,14 @@ import { SmsPipe } from '../pipes/sms.pipe';
     EdituserComponent,
     ImgPipe,
     ProfileComponent,
-    SmsPipe
+    SmsPipe,
+    FileSelectDirective
   ],
   imports: [
     CommonModule,
     PagesRoutingModule,
     HttpClientModule,
-    FormsModule,
-    FileUploadModule
+    FormsModule
 
   ],
   exports: [
@@ -59,7 +59,8 @@ import { SmsPipe } from '../pipes/sms.pipe';
     EdituserComponent,
     ImgPipe,
     ProfileComponent,
-    SmsPipe
+    SmsPipe,
+    FileSelectDirective
   ]
 })
 export class PagesModule { }
