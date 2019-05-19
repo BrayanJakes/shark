@@ -17,11 +17,14 @@ export class LoginComponent implements OnInit {
   form: NgForm;
   constructor(private loginService: LoginService,
               private router: Router
-             ) { if ( localStorage.getItem('JWT') === undefined ) {
-                return;
-             } else {
-               this.router.navigate(['dashboard']);
-             }
+             ) {
+
+
+            //   if ( localStorage.getItem('JWT') === undefined ) {
+            //     return;
+            //  } else {
+            //    this.router.navigate(['dashboard']);
+            //  }
             }
 
   ngOnInit() {
@@ -112,7 +115,9 @@ export class LoginComponent implements OnInit {
         id: localStorage.getItem('mega'),
         img: localStorage.getItem('img')
       });
-      location.reload();
+
+      this.router.navigate(['dashboard']);
+      // location.reload();
 
 
 
