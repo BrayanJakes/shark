@@ -20,11 +20,9 @@ export class LoginComponent implements OnInit {
              ) {
 
 
-            //   if ( localStorage.getItem('JWT') === undefined ) {
-            //     return;
-            //  } else {
-            //    this.router.navigate(['dashboard']);
-            //  }
+              if ( localStorage.getItem('JWT')) {
+                this.router.navigate(['dashboard']);
+             }
             }
 
   ngOnInit() {
@@ -116,8 +114,8 @@ export class LoginComponent implements OnInit {
         img: localStorage.getItem('img')
       });
 
-      this.router.navigate(['dashboard']);
-      // location.reload();
+
+      location.reload();
 
 
 
