@@ -55,7 +55,8 @@ import { SmsPipe } from '../pipes/sms.pipe';
     SidebarComponent,
     FooterComponent,
     ImgPipe,
-    SmsPipe
+    SmsPipe,
+    FileSelectDirective
   ]
 })
 export class PagesModule { }
