@@ -11,3 +11,7 @@ El repositorio que utilize para subir las imagenes se llama "ng2-file-upload", d
 # Backend
 
 Para poder utilizar la red social debes tener incluido los repositorios del backend el link es https://github.com/BrayanJakes/backendshark
+
+# Imagenes de muestra
+
+La carpeta Imagenes ImgShark pueden vizualizarla
