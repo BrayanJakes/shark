@@ -1,1 +1,6 @@
-export const URI = 'https://backendshark.herokuapp.com';
+export const URI = 'http://backendshark.herokuapp.com';
+
+
+
+
+// https://backendshark.herokuapp.com
